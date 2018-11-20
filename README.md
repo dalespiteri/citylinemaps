@@ -1,5 +1,5 @@
-# citylinemaps
-A custom map maker for Cityline News using the Google Maps API to follow Citynews branding guidelines for fonts, colours, markers, and custom labeling.
+# CityNews Maps
+A custom map maker for CityNews using the Google Maps API to follow Citynews branding guidelines for fonts, colours, markers, and custom labeling.
 
 <hr />
 
