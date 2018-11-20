@@ -1,0 +1,21 @@
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=101845c1-d860-4eae-a368-40d7dc812cd6");
+    @font-face{
+        font-family:"Proxima N W01 Reg";
+        src:url("/fonts/7e90123f-e4a7-4689-b41f-6bcfe331c00a.eot?#iefix");
+        src:url("/fonts/7e90123f-e4a7-4689-b41f-6bcfe331c00a.eot?#iefix") format("eot"),url("/fonts/64017d81-9430-4cba-8219-8f5cc28b923e.woff2") format("woff2"),url("/fonts/e56ecb6d-da41-4bd9-982d-2d295bec9ab0.woff") format("woff"),url("/fonts/2aff4f81-3e97-4a83-9e6c-45e33c024796.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Proxima N W01 Smbd";
+        src:url("/fonts/87e4b4fc-cdf1-450a-8bed-dd818cba908d.eot?#iefix");
+        src:url("/fonts/87e4b4fc-cdf1-450a-8bed-dd818cba908d.eot?#iefix") format("eot"),url("/fonts/ae47a7f5-89da-4879-b934-29722c3dd451.woff2") format("woff2"),url("/fonts/70ae52ec-d89b-4c6a-9402-854ebe423c54.woff") format("woff"),url("/fonts/6a35571c-ea14-4dac-9ae1-0e7af0abeec8.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Proxima N W01 Bold";
+        src:url("/fonts/fbc6b03a-b3a1-427c-a884-053deca3a53c.eot?#iefix");
+        src:url("/fonts/fbc6b03a-b3a1-427c-a884-053deca3a53c.eot?#iefix") format("eot"),url("/fonts/0d416408-95c6-4ad7-b08d-e60573d3b37d.woff2") format("woff2"),url("/fonts/d999c07b-a049-4eb5-b8a6-4f36ae25e67e.woff") format("woff"),url("/fonts/4d4a75f5-d32a-4a09-8665-133afd39cc37.ttf") format("truetype");
+    }
+    @font-face{
+        font-family:"Proxima N W01 Black";
+        src:url("/fonts/9b05cd3b-19d8-496a-816b-8de46cf24af1.eot?#iefix");
+        src:url("/fonts/9b05cd3b-19d8-496a-816b-8de46cf24af1.eot?#iefix") format("eot"),url("/fonts/a086d1e1-d71a-4248-bc5b-6a91bbda0756.woff2") format("woff2"),url("/fonts/43106d4c-07a9-48c0-bdeb-d82f359c85f5.woff") format("woff"),url("/fonts/7783372a-b74a-4eb3-902f-ab18b106eb46.ttf") format("truetype");
+    }

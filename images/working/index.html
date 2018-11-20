@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./style/prod.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/godswearhats/jquery-ui-rotatable@1.1/jquery.ui.rotatable.min.js"></script>
+    <title>CityNews Maps Demo</title>
+  </head>
+  <body>
+    <div class="hamburgerContainer">
+      <div class="hamburger">
+        <div class="hamburgerBar outterBar menu-closed"></div>
+        <div class="hamburgerBar">
+          <div class="middleBar middleBar1 menu-closed"></div>
+          <div class="middleBar middleBar2 menu-closed"></div>
+        </div>
+        <div class="hamburgerBar outterBar menu-closed"></div>
+      </div>
+    </div>
+    <div class="fullscreen">
+      <button id="fullscreen">fullscreen</button>
+    </div>
+    <div class="menu">
+      <ul>
+        <li class="menu-locals">locals</li>
+        <li class="menu-labels">labels</li>
+        <li class="menu-markers">markers</li>
+        <li class="menu-drawing">drawing</li>
+      </ul>
+      <div class="search-bar">
+        <h2>search locations</h2>
+        <input type="text" id="map-search-input" class="control-input" placeholder="looking for something?" onfocus="this.placeholder = ''" onblur="this.placeholder = 'looking for something?'"><br>
+      </div>
+      <div class="city-news-logo">
+        <img src="./images/city-news-logo.png" alt="">
+      </div>
+
+      <div class="fake-background"></div>
+
+      <div class="controls">
+        <!-- visual controls -->
+        <div class="control-box location-controls">
+          <div class="closeDrawer">
+            <img src="./images/drawer-x.png" alt="">
+          </div>
+          <form>
+            <label for="city-labels-checkbox" class="visualCheck">
+              <input type="checkbox" id="city-labels-checkbox" checked>
+              <span class="checkbox-label">city</span>
+              <span class="customCheck"></span>
+            </label>
+            <label for="street-labels-checkbox" class="visualCheck">
+              <input type="checkbox" id="street-labels-checkbox" checked>
+              <span class="checkbox-label">street</span>
+              <span class="customCheck"></span>
+            </label>
+            <label for="water-labels-checkbox" class="visualCheck">
+              <input type="checkbox" id="water-labels-checkbox" checked>
+              <span class="checkbox-label">water</span>
+              <span class="customCheck"></span>
+            </label>
+            <label for="transit-checkbox" class="visualCheck">
+              <input type="checkbox" id="transit-checkbox">
+              <span class="checkbox-label">transit</span>
+              <span class="customCheck"></span>
+            </label>
+            <label for="label-opacity-checkbox" class="visualCheck">
+              <input type="checkbox" id="label-opacity-checkbox">
+              <span class="checkbox-label">fade</span>
+              <span class="customCheck"></span>
+            </label>
+          </form>
+        </div>
+
+  <!-- marker controls -->
+        <div class="control-box marker-controls">
+          <div class="closeDrawer">
+            <img src="./images/drawer-x.png" alt="">
+          </div>
+          <form>
+            <div class="marker-icons">
+              <label for="blue-marker-select">
+                <input class="marker-select" data-color="blue" id="blue-marker-select" type="radio" name="marker-select" value="blue marker" checked>
+                <span class="marker-select-radio">
+                  <img src="./images/blue-marker.png" alt="" class="marker-selected">
+                </span>
+              </label>
+              <label for="red-marker-select" class="red-marker-select">
+                <input class="marker-select" data-color="red" id="red-marker-select" type="radio" name="marker-select" value="red marker">
+                <span class="marker-select-radio">
+                  <img src="./images/red-marker.png" alt="">
+                </span>
+                <span class="marker-icon"></span>
+              </label>
+              <label for="white-marker-select">
+                <input class="marker-select" data-color="white" id="white-marker-select" type="radio" name="marker-select" value="white marker">
+                <span class="marker-select-radio">
+                  <img src="./images/white-marker.png" alt="">
+                </span>
+                <span class="marker-icon"></span>
+              </label>
+            </div>
+            <label for="highlight-marker-check">
+              <input id="highlight-marker-check" type="checkbox">
+              <span class="highlight-marker-check">Highlight</span>
+            </label>
+          </form>
+          <button id="clear-markers" value="Clear Markers">Clear Markers</button>
+        </div>
+
+        <!-- label controls -->
+        <div class="control-box label-controls">
+          <div class="closeDrawer">
+            <img src="./images/drawer-x.png" alt="">
+          </div>
+          <form>
+            <label for="primary-label-select" class="label-type-select label-active">
+              <input id="primary-label-select" class="label-select-input" type="radio" name="label-type-select" data-label-type="primary-label" checked>
+              <span>Primary</span>
+            </label>
+            <label for="secondary-label-select" class="label-type-select">
+              <input id="secondary-label-select" type="radio" name="label-type-select" data-label-type="secondary-label">
+              <span>Secondary</span>
+            </label>
+            <label for="tertiary-label-select" class="label-type-select">
+              <input id="tertiary-label-select" type="radio" name="label-type-select" data-label-type="tertiary-label">
+              <span>Tertiary</span>
+            </label>
+            <label for="story-label-select" class="label-type-select">
+              <input id="story-label-select" type="radio" name="label-type-select" data-label-type="story-label">
+              <span>Story</span>
+            </label>
+            <label for="location-label-select" class="label-type-select">
+              <input id="location-label-select" type="radio" name="label-type-select" data-label-type="location-label">
+              <span>Location</span>
+            </label>
+          </form>
+          <input type="text" value="" id="label-input" class="control-input" placeholder="enter label text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'enter label text'"><br>
+          <input type="text" value="" id="sub-label-input" class="control-input story-label" placeholder="enter sub-label text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'enter sub-label text'"><br>
+          <div class="label-controls-buttons">
+            <button id="make-label" value="Make Button">make</button>
+            <button id="clear-labels">clear all</button>
+          </div>
+        </div>
+        <!-- edit shapes -->
+        <div class="control-box drawing-controls">
+          <div class="closeDrawer">
+            <img src="./images/drawer-x.png" alt="">
+          </div>
+          <button id="toggle-drawing-controls">toggle controls</button>
+          <button id="delete-shape">clear shape</button>
+          <button class="" id="delete-all-shape">clear all shapes</button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- screenshot capture div -->
+    <div id="mapContainer">
+      <!-- custom labels div -->
+      <div class="labels"></div>
+      <!-- map root div -->
+      <div id="map">
+      </div>
+    </div>
+    <script src="./scripts/mapInit.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOYCV34L82ImLbfZ4v0C2xv39ztSw4dys&libraries=places,drawing&callback=initMap">
+    </script>
+    <script type="text/javascript" src="./scripts/labels.js"></script>
+    <script type="text/javascript" src="./scripts/fullscreen.js"></script>
+  </body>
+</html>

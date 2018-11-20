@@ -1,0 +1,187 @@
+:root {
+  --blue: #003656;
+  --red: #ef3d1b;
+  --transparent-black: rgba(0,0,0,0.6);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 25px;
+  font-family: "Proxima N W01 Smbd", sans-serif;
+}
+
+h1 {
+  color: var(--blue);
+  margin-bottom: 40px;
+}
+
+.controls {
+  margin-bottom: 25px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--blue);
+  color: white;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #075482;
+}
+
+form, input {
+  margin-bottom: 10px;
+}
+
+.control-input {
+  font-size: 16px;
+  padding: 10px;
+  width: 500px;
+}
+
+.control-input:focus {
+  outline: 2px solid var(--blue);
+}
+
+.last-control {
+  margin-bottom: 40px;
+}
+
+#mapContainer {
+  width: 100%;
+  max-width: 1920px;
+  height: 100vw;
+  max-height: 1080px;
+  margin-bottom: 140px;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+  background-color: blue;
+ }
+
+ .labelContainer {
+   position: absolute;
+   z-index: 10;
+   font-family:"Proxima N W01 Smbd", sans-serif;
+   letter-spacing: 2px;
+   text-transform: uppercase;
+   cursor: move;
+   user-select: none;
+   text-align: center;
+ }
+
+ .label {
+   padding: 5px 20px;
+   box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+ }
+ .labelTop {
+   padding: 5px 20px;
+ }
+ .labelBottom {
+   padding: 5px 20px;
+   box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+   font-size: 20px;
+   background-color: var(--red);
+   color: white;
+ }
+
+ .labelContainer:hover .label-close {
+   opacity: 1;
+   transform: scale(1) rotate(45deg);
+ }
+ .label:hover .ui-rotatable-handle {
+   opacity: 1;
+   transform: scale(1) rotate(0deg);
+ }
+
+ .label-close {
+   position: absolute;
+   top: -15px;
+   right: -15px;
+   width: 30px;
+   height: 30px;
+   border: 3px solid white;
+   border-radius: 50%;
+   background-color: var(--blue);
+   color: white;
+   font-size: 24px;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   opacity: 1;
+   transform: scale(0) rotate(180deg);
+   transition: all 250ms;
+ }
+
+ .label-close p {
+   transform: translate(1px, -2px);
+ }
+
+ .ui-rotatable-handle {
+   position: absolute;
+   bottom: -15px;
+   left: -15px;
+   width: 30px;
+   height: 30px;
+   border: 3px solid white;
+   border-radius: 50%;
+   background-color: var(--blue);
+   color: white;
+   font-size: 24px;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   opacity: 1;
+   transition: all 250ms;
+   background-image: url('../images/rotate.png');
+   background-position: center;
+   background-size: 75%;
+   background-repeat: no-repeat;
+   transform: scale(0) rotate(-180deg);
+ }
+
+ .primary-label {
+   font-size: 35px;
+   background-color: white;
+   color: var(--blue);
+ }
+
+ .secondary-label {
+   font-size: 25px;
+   background-color: white;
+   color: black;
+ }
+
+ .tertiary-label {
+   font-size: 25px;
+   background-color: var(--transparent-black);
+   color: white;
+ }
+
+ .story-label {
+   font-size: 20px;
+   background-color: var(--red);
+   color: white;
+ }
+
+ .location-label {
+   font-size: 20px;
+   background-color: var(--blue);
+   color: white;
+ }
