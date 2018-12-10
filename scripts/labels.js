@@ -17,6 +17,7 @@ $('#make-label').on('click', function(){
   }
 });
 
+// add a listener to have the enter key create labels
 $('#label-input, #sub-label-input').keypress(function (e) {
   if (e.which == 13) {
     if($('#label-input').val().length !== 0 && $('#sub-label-input').val().length === 0) {
